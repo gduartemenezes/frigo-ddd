@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "awilix": "^4.2.6",
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {}
 }
