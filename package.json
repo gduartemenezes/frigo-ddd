@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/cors": "^3.1.0",
     "awilix": "^4.2.6",
-    "express": "^4.17.1",
+    "awilix-koa": "^4.0.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-respond": "^2.1.0",
     "mongoose": "^5.10.7"
   },
   "devDependencies": {}
