@@ -30,3 +30,5 @@ class User extends Entity {
     return hasRole;
   }
 }
+
+export default new User();
