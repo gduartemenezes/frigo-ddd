@@ -37,7 +37,13 @@ class Server {
       .use(loadControllers("./routes/*.js", { cwd: __dirname }))
       .use(notFoundHandler);
 
-    return http.createServer(this.app.callback());
+    this.app.on("SERVER_ERROR", (error) => {
+      this.logger.error(error.stack);
+    });
+
+    const appServer = http.createServer(this.app.callback());
+
+    return appServer;
   }
 
   async start(container) {
