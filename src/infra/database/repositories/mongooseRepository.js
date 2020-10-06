@@ -44,4 +44,14 @@ class MongooseRepository {
       ? this.findById(document._id, { select, populate, lean })
       : this.findById(document, { select, populate, lean });
   }
+
+  onError(error, message) {
+    // We will need to inject a logger in pur class constructor of course
+    this.logger.error(error.stack);
+
+    if (error.name === "MongoError" && error.code === 11000) {
+      throw new Error("The resource already exists");
+    }
+    throw new Error(message || error.message);
+  }
 }
