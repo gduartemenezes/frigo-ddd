@@ -7,11 +7,11 @@ module.exports = {
     "/user/password/reset",
     "/user/logout",
   ],
-  defaultParams: {
-    isPublished: true,
-    isPrivate: false,
-  },
   aclRules: {
+    defaultParams: {
+      isPublished: true,
+      isPrivate: false,
+    },
     roles: {
       USER: {
         can: {
